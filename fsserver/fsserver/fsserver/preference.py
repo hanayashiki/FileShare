@@ -1,0 +1,3 @@
+FILE_LOCATION = "uploaded/"
+
+FILE_CHUNK_SIZE = 512
