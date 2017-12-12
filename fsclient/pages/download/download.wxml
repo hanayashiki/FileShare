@@ -1,0 +1,25 @@
+<!--pages/download/download.wxml-->
+
+
+<view class="container">
+
+    <image src="{{ preview_pic }}" bindload="imageLoad" bindlongtap="chooseImageTap" data-index="0" style="width:{{ images[0].width }}rpx; height:{{ images[0].height }}rpx">
+    </image>
+
+    <view class="page-section">
+        <view class="weui-cells__title">请输入文件标识符</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <input class="weui-input" maxlength="{{ token_limit }}" 
+                    placeholder="{{ default_token }}" bindinput="bindKeyInput"/>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="page-body">
+        <view class="btn-area" id="buttonContainer" bindtap="download">
+            <button type="primary">下载文件</button>
+        </view>
+    </view>
+</view>

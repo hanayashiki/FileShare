@@ -1,0 +1,21 @@
+<!--pages/home/home.wxml-->
+
+
+<view class="container">
+
+    <text>图片分享工具 - fileshare</text>
+
+    <view class="page-body" style="padding: 100rpx 0">
+        <view class="btn-area">
+            <navigator url="../upload/upload" hover-class="navigator-hover" style="margin: 40rpx 0">
+                <button type="default">上传图片</button>
+            </navigator>
+            <navigator url="../download/download" hover-class="navigator-hover">
+                <button type="default">接收图片</button>
+            </navigator>
+        </view>
+    </view>
+
+    <image src="../../art/logo.png" mode="top"  style="margin: 80rpx 0">
+    </image>
+</view>

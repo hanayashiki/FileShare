@@ -1,0 +1,31 @@
+<!--pages/upload/upload.wxml-->
+
+<view class="container">
+    <image src="{{ preview_pic }}" bindload="imageLoad" bindlongtap="chooseImageTap" data-index="0" style="width:{{ images[0].width }}rpx; height:{{ images[0].height }}rpx">
+    </image>
+
+    <view class="page-section">
+        <view class="weui-cells__title">文件标识符 (数字和小写英文字母组成)</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <input class="weui-input" maxlength="{{ token_limit }}" 
+                 value="{{set_input}}"
+                    placeholder="{{ default_token }}" bindinput="bindKeyInput"/>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if="{{ selected == true }}">
+        <view class="page-body">
+            <view class="btn-area" id="buttonContainer" bindtap="uploadImage">
+                <button type="primary">上传图片</button>
+            </view>
+        </view>
+    </view>
+
+    <view class="page-body">
+        <view class="btn-area" id="buttonContainer" bindtap="chooseImageTap">
+            <button type="primary">选择图片</button>
+        </view>
+    </view>
+</view>
